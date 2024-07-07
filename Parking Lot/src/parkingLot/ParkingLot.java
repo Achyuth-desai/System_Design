@@ -13,6 +13,7 @@ import parkingTicket.ParkingTicket;
 import vehicle.Vehicle;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static java.lang.System.exit;
 
@@ -35,6 +36,8 @@ public class ParkingLot {
     public Entrance getEntrance(int id){
         return this.entrance.get(id);
     }
+    public Exit getExit(int id){ return this.exit.get(id); }
+    public ParkingTicket getTicket(int id){ return this.tickets.get(id); }
 
     // Created a private constructor to add a restriction (due to Singleton)
     private ParkingLot() {
@@ -51,6 +54,7 @@ public class ParkingLot {
         exit = new HashMap<Integer, Exit>();
         Exit firstExit = new Exit(1);
         exit.put(1, firstExit);
+        tickets = new HashMap<>();
     }
 
     // Created a static method to access the singleton instance of ParkingLot
@@ -87,15 +91,34 @@ public class ParkingLot {
             System.out.print("SORRY, THE SPOT IS FULL.");
             exit(0);
         }
-        int ticketNo = displayBoard.getOccupiedSpots(spotType) + 1;
+        //int ticketNo = displayBoard.getOccupiedSpots(spotType) + 1;
+        int ticketNo = tickets.size() + 1;
         parkingSpot = displayBoard.getParkingSpot(ticketNo, spotType);
         parkingSpot.assignVehicle(vehicle);
         parkingTicket = new ParkingTicket(ticketNo, vehicle, entrance, parkingSpot);
+
+        tickets.put(ticketNo, parkingTicket);
 
         return parkingTicket;
     }
 
     public boolean isFull(DisplayBoard displayBoard, SpotType type) {
         return displayBoard.checkIsFull(type);
+    }
+
+    public void showTickets(){
+        ParkingTicket ticket = null;
+        System.out.println("TOTAL NUMBER OF TICKET ISSUED : " + tickets.size());
+        System.out.print("------------------------LIST OF ALL TICKETS------------------------\n");
+        for(Map.Entry<Integer, ParkingTicket> set: tickets.entrySet() ) {
+            ticket = set.getValue();
+            System.out.println("HERE ARE YOUR TICKET DETAILS : ");
+            System.out.println("TICKET NUMBER   : " + ticket.getTicketNo());
+            System.out.println("LICENSE NUMBER  : " + ticket.getVehicleNo());
+            System.out.println("ENTRY TIMESTAMP : " + ticket.getTimestamp());
+            System.out.println("AMOUNT DUE      : " + ticket.getAmount());
+            System.out.println("TICKET STATUS   : " + ticket.getStatus());
+            System.out.println();
+        }
     }
 }

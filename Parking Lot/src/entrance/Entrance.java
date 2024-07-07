@@ -42,8 +42,9 @@ public class Entrance {
         Scanner input = new Scanner(System.in);
 
         System.out.print(messages.getVehicleTypeMessage());
-        int vehicleChoice = input.nextInt(); // GET THE VEHICLE TYPE
-        int licenseNo = 1234; //FIXING THIS. HAS TO BE USER INPUT.
+        int vehicleChoice = input.nextInt();
+        System.out.print("ENTER LICENSE NUMBER : ");// GET THE VEHICLE TYPE
+        int licenseNo = input.nextInt(); //FIXING THIS. HAS TO BE USER INPUT.
         switch (vehicleChoice){
             case 1: vehicleType = VehicleType.CAR;
                 vehicle = new Car(licenseNo, vehicleType);
