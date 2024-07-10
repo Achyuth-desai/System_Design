@@ -27,10 +27,9 @@ public class Main {
             int useCase = input.nextInt();
             // ENTRY USE CASE
             if(useCase==1) {
-                //displayBoard.showFreeSlot();
                 ticket = entrance.getTicket();
                 entrance.displayTicket(ticket);
-                //parkingLot.showTickets();  // Function to list all tickets
+                //parkingLot.showTickets();  // Uncomment to list all tickets
             }
             //EXIT USE CASE
             if(useCase==2){

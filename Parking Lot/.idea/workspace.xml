@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f2ab22-2216-4283-a48f-7eea987ac857" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayBoard/DisplayBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayBoard/DisplayBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entrance/Entrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entrance/Entrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exit/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exit/Exit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parkingRate/ParkingRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parkingRate/ParkingRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parkingTicket/ParkingTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parkingTicket/ParkingTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/Cash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/Cash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/Payment.java" afterDir="false" />
-    </list>
+    <list default="true" id="c2f2ab22-2216-4283-a48f-7eea987ac857" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
