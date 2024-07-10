@@ -61,7 +61,7 @@ public class Entrance {
             default: System.out.println("WRONG CHOICE");
                 exit(0);
         }
-        System.out.println(messages.getHandicappedEligible());
+        System.out.print(messages.getHandicappedEligible());
         int isHandicapped = input.nextInt();
         if(isHandicapped == 1)
             vehicle.setVehicleType(VehicleType.HANDICAPPED);

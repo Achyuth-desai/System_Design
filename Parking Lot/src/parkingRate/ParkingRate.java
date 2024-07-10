@@ -5,6 +5,11 @@ public class ParkingRate {
     private double hours;
     private double rate;
 
+    public ParkingRate(){
+        this.hours = 0;
+        this.rate = 0;
+    }
+
     public void setHours(double hours){
         this.hours = hours;
     }
@@ -13,7 +18,12 @@ public class ParkingRate {
     }
 
     // Member function
-    public void calculate(){
-        this.rate = 10 * this.hours;
+    public void calculate(double hours){
+        this.rate = 10 * hours;
     };
+
+    public double getRate(double hours){
+        calculate(hours);
+        return this.rate;
+    }
 }

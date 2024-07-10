@@ -57,6 +57,13 @@ public class DisplayBoard {
         }
         return parkingSpot;
     }
+    public void freeParkingSpot(ParkingSpot parkingSpot){
+        parkingSpot.removeVehicle();
+        largeSpots.remove(parkingSpot);
+        handicappedSpots.remove(parkingSpot);
+        compactSpots.remove(parkingSpot);
+        motorcycleSpots.remove(parkingSpot);
+    }
 
     // Member function
     public void addParkingSpot(String spotType, List<ParkingSpot> spots){}; //NOT IMPLEMENTED
@@ -86,6 +93,7 @@ public class DisplayBoard {
         System.out.println("TICKET NUMBER   : " + ticket.getTicketNo());
         System.out.println("LICENSE NUMBER  : " + ticket.getVehicleNo());
         System.out.println("ENTRY TIMESTAMP : " + ticket.getTimestamp());
+        System.out.println("EXIT TIMESTAMP  : " + ticket.getExit());
         System.out.println("AMOUNT DUE      : " + ticket.getAmount());
         System.out.println("TICKET STATUS   : " + ticket.getStatus());
         System.out.println();

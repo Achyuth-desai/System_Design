@@ -22,24 +22,30 @@ public class Main {
         DisplayBoard displayBoard = entrance.getDisplayBoard();
 
         while(loop == 1) {
+            displayBoard.showFreeSlot();
             System.out.print("USE CASE : 1-ENTRY / 2-EXIT.\tCHOICE : ");
             int useCase = input.nextInt();
             // ENTRY USE CASE
             if(useCase==1) {
-                displayBoard.showFreeSlot();
+                //displayBoard.showFreeSlot();
                 ticket = entrance.getTicket();
                 entrance.displayTicket(ticket);
-                parkingLot.showTickets();
+                //parkingLot.showTickets();  // Function to list all tickets
             }
             //EXIT USE CASE
             if(useCase==2){
                 System.out.print("ENTER TICKET NUMBER : ");
                 int ticketNo = input.nextInt();
                 ticket = parkingLot.getTicket(ticketNo);
-                displayBoard.showTicket(ticket);
+                boolean validated = exit.validateTicket(ticket);
+                if(validated)
+                    System.out.print("BARRICADE OPENED. YOU MAY EXIT THE PARKING LOT. THANK YOU.");
+                else
+                    System.out.println("TICKET VALIDATION FAILED. PLEASE TRY AGAIN.");
             }
             System.out.print("\n\tCONTINUE? 1-YES/ 2-NO : ");
             loop = input.nextInt();
+            System.out.println();
         }
     }
 }

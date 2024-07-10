@@ -52,4 +52,14 @@ public class ParkingTicket {
     public int getVehicleNo(){
         return this.vehicle.getLicenseNo();
     }
+    public ParkingSpot getParkingSpot(){ return this.parkingSpot; }
+    public Date getExit(){ return this.exit;}
+    public Entrance getEntrance() { return this.entrance;}
+
+    public void setExitIns(Exit exitIns){ this.exitIns = exitIns; }
+    public void setExit(Date exit){ this.exit = exit; }
+    public void setAmount(double amount){ this.amount = amount; }
+
+    public void setPaid(){ this.status = TicketStatus.PAID;}
+
 }
